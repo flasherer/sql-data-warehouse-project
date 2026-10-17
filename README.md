@@ -33,7 +33,7 @@ The project reads the six files from C:\sql\dwh_project\01_datasets\. Put the fo
 ## 🏗️ Data Architecture
 The data architecture of this project follows the **Medallion Architecture**, which consists of three layers: **Bronze**, **Silver**, and **Gold**.
 
-
+![Data Architecture](https://github.com/flasherer/sql-data-warehouse-project/blob/main/docs/Data%20Architecture.png)
 
 
 
