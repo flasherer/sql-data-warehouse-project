@@ -10,18 +10,19 @@ You take raw files from two systems, a CRM and an ERP, and build one data wareho
 
 New here? Open the setup guide in the 00_setup folder. It walks you through installing SQL Server and creating the database, on Windows and Mac, with the fixes for the common errors.
 
+```text
 sql-data-warehouse-project/
-├── 00_setup/               the setup guide, and the one-click Docker start for Mac
-├── 01_datasets/            the six source files the project loads
-│   ├── source_crm/         three files from the CRM system
-│   └── source_erp/         three files from the ERP system
-├── 02_docs/                the requirements, the diagrams and the notes
-├── 03_scripts/             the project scripts, in the order of the videos
-│   ├── init_database.sql   creates the database: run it first
-│   ├── bronze/             loads the raw files
-│   ├── silver/             cleans and prepares the data
-│   └── gold/               builds the tables for analysis
-└── 04_tests/               checks the quality of the silver and gold data
+├── 00_setup/                  # Setup guide and Docker configuration for Mac
+├── 01_datasets/               # Six source files used in the project
+│   ├── source_crm/            # Three files from the CRM system
+│   └── source_erp/            # Three files from the ERP system
+├── 02_docs/                   # Requirements, diagrams, and documentation
+├── 03_scripts/                # SQL scripts organized by processing layer
+│   ├── init_database.sql      # Creates the database; run first
+│   ├── bronze/                # Loads raw data from CSV files
+│   ├── silver/                # Cleans and prepares the data
+│   └── gold/                  # Builds tables for analysis
+└── 04_tests/                  # Validates Silver and Gold data quality
 
 
 The project reads the six files from C:\sql\dwh_project\01_datasets\. Put the folder there, or change the six paths in 03_scripts/bronze/proc_load_bronze.sql. The videos show the folders without numbers: datasets there is 01_datasets here, scripts is 03_scripts.
