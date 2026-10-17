@@ -23,6 +23,7 @@ sql-data-warehouse-project/
 │   ├── silver/                # Cleans and prepares the data
 │   └── gold/                  # Builds tables for analysis
 └── 04_tests/                  # Validates Silver and Gold data quality
+````
 
 
 The project reads the six files from C:\sql\dwh_project\01_datasets\. Put the folder there, or change the six paths in 03_scripts/bronze/proc_load_bronze.sql. The videos show the folders without numbers: datasets there is 01_datasets here, scripts is 03_scripts.
