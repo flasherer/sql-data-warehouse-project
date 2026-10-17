@@ -4,6 +4,47 @@ Welcome to the **Data Warehouse and Analytics Project** repository! 🚀
 
 This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
 
+The materials of the data warehouse project: the source files, every script from the videos, and the docs.
+
+You take raw files from two systems, a CRM and an ERP, and build one data warehouse in SQL Server. At the end, the data is clean and ready for analysis.
+
+New here? Open the setup guide in the 00_setup folder. It walks you through installing SQL Server and creating the database, on Windows and Mac, with the fixes for the common errors.
+
+sql-data-warehouse-project/
+├── 00_setup/               the setup guide, and the one-click Docker start for Mac
+├── 01_datasets/            the six source files the project loads
+│   ├── source_crm/         three files from the CRM system
+│   └── source_erp/         three files from the ERP system
+├── 02_docs/                the requirements, the diagrams and the notes
+├── 03_scripts/             the project scripts, in the order of the videos
+│   ├── init_database.sql   creates the database: run it first
+│   ├── bronze/             loads the raw files
+│   ├── silver/             cleans and prepares the data
+│   └── gold/               builds the tables for analysis
+└── 04_tests/               checks the quality of the silver and gold data
+
+
+The project reads the six files from C:\sql\dwh_project\01_datasets\. Put the folder there, or change the six paths in 03_scripts/bronze/proc_load_bronze.sql. The videos show the folders without numbers: datasets there is 01_datasets here, scripts is 03_scripts.
+
+
+
+## 🏗️ Data Architecture
+The data architecture of this project follows the **Medallion Architecture**, which consists of three layers: **Bronze**, **Silver**, and **Gold**.
+
+
+
+
+
+
+
+
+1. **Bronze Layer:** Stores raw data from CRM and ERP source systems by loading CSV files into SQL Server without applying transformations.
+
+2. **Silver Layer:** Performs data cleansing, standardization, and transformation to improve data quality and ensure consistency.
+
+3. **Gold Layer:** Contains business-ready data organized into fact and dimension tables using a star schema for reporting and analytics.
+
+
 ---
 
 ## 🚀 Project Requirements
